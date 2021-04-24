@@ -11,12 +11,10 @@ jobs:
       uses: actions/checkout@v2
     - name: WordPress Plugin Deploy
       id: deploy
-      uses: 10up/action-wordpress-plugin-deploy@stable
+      uses: dinhtungdu/action-wordpress-plugin-deploy@test
       with:
         generate-zip: true
       env:
-        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
         SLUG: woolab-ic-dic
     - name: Upload release asset
       uses: actions/upload-release-asset@v1
